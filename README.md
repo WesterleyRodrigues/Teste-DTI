@@ -12,13 +12,26 @@ Visualização em tempo real dos drones e pedidos.
 Histórico de alocações e detalhes das viagens.
 
 📂 Estrutura do Projeto
-/backend    -> Backend em .NET 8 (API REST)
 
-  Program.cs
-  
-/frontend   -> Frontend em React
+/backend
+    /bin
+    /obj
+    /Properties
+    appsettings.Development.json
+    appsettings.json
+    backend.sln
+    BackendDrones.csproj
+    global.json
+    Program.cs
 
-  src/App.jsx
+/frontend
+    /node_modules
+    /public
+    /src
+        App.js
+        index.js
+        
+README.md
 
 ⚙️ Pré-requisitos
 
@@ -37,7 +50,8 @@ npm
 git clone git clone https://github.com/WesterleyRodrigues/Teste‑DTI.git 
 cd Teste‑DTI
 
-3. Rodar o Backend
+2. Rodar o Backend
+
 cd backend
 dotnet restore
 dotnet run

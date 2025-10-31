@@ -1,93 +1,64 @@
-# 🚀 Sistema Inteligente de Entregas por Drones
+Sistema de Entregas por Drones
 
-Simulação completa de entregas urbanas feitas por **drones autônomos**, com **backend em .NET 8** e **frontend em React**.  
-O projeto foi desenvolvido como um **teste técnico** para demonstrar lógica, organização e integração entre sistemas.
+Sistema web para simulação de entregas usando drones com capacidade de carga limitada, cálculo de rotas otimizadas e visualização em mapa.
+Os drones pegam os pedidos em um heliponto central e entregam nos destinos, respeitando capacidade máxima, distância máxima e prioridade dos pedidos.
 
----
+📝 Funcionalidades
 
-## 🧭 Visão Geral
+Cadastro de novos pedidos com coordenadas X, Y, peso e prioridade.
+Alocação automática de pedidos entre drones, considerando capacidade, distância e prioridade.
+Simulação animada do trajeto dos drones no mapa.
+Visualização em tempo real dos drones e pedidos.
+Histórico de alocações e detalhes das viagens.
 
-A proposta é simular o funcionamento de uma startup de logística que realiza entregas em uma cidade mapeada por coordenadas (X, Y).  
-O sistema gerencia **pedidos**, **drones** e **rotas de voo**, garantindo entregas dentro dos limites de **peso**, **distância** e **prioridade**.
+📂 Estrutura do Projeto
+/backend    -> Backend em .NET 8 (API REST)
+  Program.cs
+/frontend   -> Frontend em React
+  src/App.jsx
 
----
+⚙️ Pré-requisitos
 
-## ⚙️ Funcionalidades Principais
+Antes de rodar o projeto, é necessário:
 
-✅ Cadastro de pedidos com:
-- Localização (coordenadas X, Y)
-- Peso do pacote
-- Prioridade da entrega (baixa, média, alta)
+Node.js
+ (v18+ recomendado)
 
-✅ Alocação automática dos pedidos:
-- Cada drone possui capacidade máxima (kg) e alcance (km)
-- O algoritmo escolhe a melhor combinação com base em distância e prioridade
+npm
+ (vem com Node.js)
 
-✅ Visualização no mapa:
-- Exibe pedidos, posições e voos dos drones em tempo real
-
-✅ Interface simples e responsiva (React)
-
----
-
-🔹 Tecnologias
-
-Backend:
-
-.NET 8 (C#)
-
-WebApplication minimal API
-
-CORS habilitado para comunicação com frontend
-
-Frontend:
-React.js
-React-Leaflet para mapas interativos
-Fetch API para comunicação com o backend
-
-🔹 Pré-requisitos
 .NET 8 SDK
-Node.js (v18 ou superior recomendado)
-npm ou yarn
 
-🔹 Como Executar
-Backend
-Abra o terminal na pasta do backend.
-Execute o comando:
+🚀 Como Rodar
+1. Clonar o repositório
+git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+cd NOME_DO_REPOSITORIO
+
+2. Rodar o Backend
+cd backend
+dotnet restore
 dotnet run
 
-O backend ficará disponível em http://localhost:5216.
+O backend estará disponível em http://localhost:5216.
 
-Endpoints principais:
+3. Rodar o Frontend
 
-Método	Rota	Descrição
-GET	/pedidos	Retorna todos os pedidos
-POST	/pedidos	Adiciona um novo pedido
-GET	/alocar	Aloca pedidos aos drones
+Em outro terminal:
 
-Observação: Certifique-se de que o backend esteja rodando antes de iniciar o frontend.
-
-Frontend
-
-Abra o terminal na pasta do frontend.
-
-Instale as dependências:
-
+cd frontend
 npm install
-
-Inicie o frontend:
-
 npm start
 
+O frontend abrirá em http://localhost:3000 e se conectará automaticamente ao backend.
 
-O frontend será aberto em http://localhost:3000.
+🖥️ Como Usar
 
-🔹 Como Usar
+No frontend, preencha X, Y, Peso e Prioridade para adicionar um novo pedido.
+Clique em Alocar Pedidos para distribuir os pedidos entre os drones.
+Observe a movimentação dos drones no mapa em tempo real.
+Consulte a lista de pedidos para ver quais já foram entregues.
 
-Adicione novos pedidos preenchendo os campos X, Y, Peso e Prioridade.
-Clique em Adicionar Pedido.
-Para alocar pedidos entre drones, clique em Alocar Pedidos.
-Acompanhe o movimento dos drones no mapa interativo:
-Heliponto central marcado
-Pedidos pendentes ou entregues
-Drones com status "Disponível" ou "Em missão"
+⚠️ Observações
+
+Sempre execute o backend antes do frontend.
+As portas padrão são 5216 para o backend e 3000 para o frontend.

@@ -31,10 +31,10 @@ npm
 
 🚀 Como Rodar
 1. Clonar o repositório
-git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
-cd NOME_DO_REPOSITORIO
+git clone git clone https://github.com/WesterleyRodrigues/Teste‑DTI.git 
+cd Teste‑DTI
 
-2. Rodar o Backend
+3. Rodar o Backend
 cd backend
 dotnet restore
 dotnet run

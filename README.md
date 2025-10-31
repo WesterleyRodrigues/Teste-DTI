@@ -13,8 +13,11 @@ Histórico de alocações e detalhes das viagens.
 
 📂 Estrutura do Projeto
 /backend    -> Backend em .NET 8 (API REST)
+
   Program.cs
+  
 /frontend   -> Frontend em React
+
   src/App.jsx
 
 ⚙️ Pré-requisitos

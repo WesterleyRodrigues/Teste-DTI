@@ -47,7 +47,7 @@ npm
 
 🚀 Como Rodar
 1. Clonar o repositório
-git clone git clone https://github.com/WesterleyRodrigues/Teste‑DTI.git 
+git clone git clone https://github.com/WesterleyRodrigues/Delivery_Drones
 cd Teste‑DTI
 
 2. Rodar o Backend
